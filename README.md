@@ -9,15 +9,18 @@ This project was created by https://www.github.com/@rpenyav
 - Clone project.
 - Install project
 
-     ```yarn```
+     ```npm install```
 
 - Start project
 
-     ```yarn start```
+     ```npm run start:dev```
+
+     ```npm run start:prod```
+
 
 - Run unit test
 
-    ```yarn test```
+    ```npm run test```
 
 ## Contact
 
