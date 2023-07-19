@@ -2,7 +2,6 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";
 import { RootState } from "../../redux/root-reducer";
-import { FaSpinner } from "react-icons/fa";
 import SpinnerIcon from "./SpinnerIcon";
 
 const Cabecera: React.FC = () => {

@@ -1,7 +1,8 @@
 import React from "react";
 import Cabecera from "../components/Home/Cabecera";
+import { GlobalLayoutProps } from "model/GlobalLayoutProps";
 
-const GlobalLayout: React.FC<React.PropsWithChildren<{}>> = ({ children }) => {
+const GlobalLayout: React.FC<GlobalLayoutProps> = ({ children }) => {
   return (
     <>
       <div className="container">

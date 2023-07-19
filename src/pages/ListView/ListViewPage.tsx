@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { fetchMusicAlbum, Podcast } from "../../redux/List";
 import { RootState } from "../../redux/root-reducer";
 import { AppDispatch } from "../../redux/store";
@@ -19,7 +19,6 @@ const ListViewPage: React.FC<ListViewPageProps> = ({ onPodcastClick }) => {
   const [recordsPerPage] = useState(12); //registros por página
   const [estaCargado, setCargado] = useState(false);
   const podcasts = useSelector((state: RootState) => state.podcasts.list);
-  const isLoading = useSelector((state: RootState) => state.podcasts.isLoading);
 
   useEffect(() => {
     dispatch(fetchMusicAlbum());
