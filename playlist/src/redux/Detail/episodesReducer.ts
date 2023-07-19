@@ -1,6 +1,6 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 import { Episode } from "./types";
-import { fetchEpisodes, updateEpisodes } from "./episodesActions";
+import { fetchEpisodes, updateEpisodes } from "./";
 
 export interface EpisodesState {
   episodes: Episode[];

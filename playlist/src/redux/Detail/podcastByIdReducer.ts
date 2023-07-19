@@ -2,6 +2,12 @@ import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 import { PodcastById } from "./types";
 import { fetchPodcastById } from "./podcastByIdActions";
 
+/**
+ *  reducer específico para mostrar la card del artista.
+ *  la descripcion no viene en el detalle y he tenido que llamar el endpoint general y obtener e lartista segun
+ *  el idPodcast
+ *
+ */
 interface PodcastByIdState {
   podcast: PodcastById | null;
   loading: boolean;
@@ -10,7 +16,7 @@ interface PodcastByIdState {
 
 const initialState: PodcastByIdState = {
   podcast: null,
-  loading: false,
+  loading: true,
   error: null,
 };
 

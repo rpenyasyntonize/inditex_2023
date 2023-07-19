@@ -23,13 +23,13 @@ const PodcasterCardDetail: React.FC<Props> = ({ showList, podcastId }) => {
   }, [dispatch, podcastId]);
 
   if (!podcast) {
-    return <div>Loading...</div>;
+    return <div data-testid="podcaster-card-detail">Loading...</div>;
   }
 
   const { artworkUrl600, collectionName, artistName, description } = podcast;
 
   return (
-    <div>
+    <div data-testid="podcaster-card-detail">
       <Link to={`/podcast/${podcastId}`}>
         <img
           src={artworkUrl600}
