@@ -1,6 +1,6 @@
 import { Provider } from "react-redux";
 import { configureStore, EnhancedStore } from "@reduxjs/toolkit";
-import { MemoryRouter } from "react-router-dom"; // Importar MemoryRouter por el useNavigate
+import { MemoryRouter } from "react-router-dom"; //MemoryRouter por el useNavigate
 import { render, screen, fireEvent } from "@testing-library/react";
 import rootReducer, { RootState } from "../redux/root-reducer";
 import ListViewPage from "../pages/ListView/ListViewPage";

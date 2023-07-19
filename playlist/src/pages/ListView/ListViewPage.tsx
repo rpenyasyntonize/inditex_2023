@@ -6,7 +6,12 @@ import { RootState } from "../../redux/root-reducer";
 import { AppDispatch } from "../../redux/store";
 import ResultChip from "../../components/Home/ResultChip";
 
-const ListViewPage: React.FC = () => {
+//añadido para el test
+interface ListViewPageProps {
+  onPodcastClick?: (podcast: Podcast) => void;
+}
+
+const ListViewPage: React.FC<ListViewPageProps> = ({ onPodcastClick }) => {
   const dispatch = useDispatch<AppDispatch>();
   const navigate = useNavigate();
   const [filterText, setFilterText] = useState("");
@@ -62,8 +67,11 @@ const ListViewPage: React.FC = () => {
     }, 300);
   };
 
-  const handlePodcastClick = (podcastId: string) => {
-    navigate(`/podcast/${podcastId}`);
+  const handlePodcastClick = (podcast: Podcast) => {
+    if (onPodcastClick) {
+      onPodcastClick(podcast);
+    }
+    navigate(`/podcast/${podcast.id}`);
   };
 
   const truncateString = (str: string, maxLength: number) => {
@@ -101,7 +109,7 @@ const ListViewPage: React.FC = () => {
             >
               <div
                 className="cursor-pointer"
-                onClick={() => handlePodcastClick(id)}
+                onClick={() => handlePodcastClick(podcast)}
               >
                 <div className="card" style={{ height: 280 }}>
                   <div className="card-body">

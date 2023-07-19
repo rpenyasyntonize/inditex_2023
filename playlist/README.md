@@ -21,3 +21,5 @@ This project was created by https://www.github.com/@rpenyav
 ## Contact
 
 For queries, please contact to rafa@rafapenya.com
+
+The code of this project was tested by esLint and supervised under SOLID

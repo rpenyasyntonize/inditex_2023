@@ -1,4 +1,3 @@
-import Cabecera from "../../components/Home/Cabecera";
 import GlobalLayout from "../../layout/GlobalLayout";
 import ListViewPage from "../ListView/ListViewPage";
 
