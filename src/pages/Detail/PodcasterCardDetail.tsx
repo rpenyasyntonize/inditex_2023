@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { Link, useParams } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { RootState } from "../../redux/root-reducer";
 import { AppDispatch } from "../../redux/store";
 

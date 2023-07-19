@@ -9,7 +9,7 @@ import { formatDate, formatDuration } from "../../utils/functions";
 import { Link } from "react-router-dom";
 
 interface Props {
-  podcastId: any;
+  podcastId?: string;
 }
 
 const Episodes: React.FC<Props> = ({ podcastId }) => {
@@ -18,7 +18,7 @@ const Episodes: React.FC<Props> = ({ podcastId }) => {
   const isLoaded = useSelector((state: RootState) => state.episodes.isLoaded);
 
   useEffect(() => {
-    dispatch(fetchEpisodes(podcastId));
+    dispatch(fetchEpisodes(podcastId!));
   }, [dispatch, podcastId]);
 
   if (isLoaded) {

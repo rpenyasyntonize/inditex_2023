@@ -1,5 +1,4 @@
 import { createAsyncThunk, createAction } from "@reduxjs/toolkit";
-import { RootState } from "../root-reducer";
 import { Episode } from "./types";
 
 const apiUrlDetail = process.env.REACT_APP_API_URL_DETAIL;
